@@ -318,6 +318,7 @@ tooltipAnchor:SetSize(50, 50)
 _G.hooksecurefunc("GameTooltip_SetDefaultAnchor", function(tooltip, parent)
     tooltip:ClearAllPoints()
     tooltip:SetPoint(Tooltips.db.global.position.point, tooltipAnchor)
+    tooltip:SetOwner(parent, "ANCHOR_CURSOR")
 end)
 
 do -- AddDynamicInfo, ClearDynamicInfo
